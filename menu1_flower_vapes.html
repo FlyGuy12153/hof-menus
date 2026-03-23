@@ -287,6 +287,30 @@ uc();setInterval(uc,30000);
   }
   loop();
 })();
+
+// ═══ KEEP SCREEN AWAKE ═══
+// Wake Lock API (modern browsers) + silent video fallback (Silk/older)
+(async function(){
+  // Try Wake Lock API first
+  if('wakeLock' in navigator){
+    let wl=null;
+    async function grab(){try{wl=await navigator.wakeLock.request('screen')}catch(e){}}
+    await grab();
+    document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')grab()});
+  }
+  // Fallback: play a tiny silent video in a loop — prevents sleep on Fire Stick Silk
+  const v=document.createElement('video');
+  v.setAttribute('playsinline','');v.setAttribute('muted','');v.muted=true;v.setAttribute('loop','');
+  v.style.cssText='position:fixed;top:-1px;left:-1px;width:1px;height:1px;opacity:0;pointer-events:none;z-index:-1';
+  // Minimal silent webm (1 frame, 1x1px)
+  v.src='data:video/webm;base64,GkXfo59ChoEBQveBAULygQRC84EIQoKEd2VibUKHgQJChYECGFOAZwH/////////FUmpZpkq17GDD0JATYCGQ2hyb21lV0WGQ2hyb21lFlSua7+uvdeBAXPFh2UBnIEAIrWcg3VuZIECElTDZ0OGT0KEYQ==';
+  document.body.appendChild(v);
+  try{await v.play()}catch(e){}
+  // Re-trigger on visibility change
+  document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')try{v.play()}catch(e){}});
+  // Also reload page every 4 hours to prevent any memory leaks from long runtime
+  setTimeout(()=>location.reload(),4*60*60*1000);
+})();
 </script>
 </body>
 </html>
