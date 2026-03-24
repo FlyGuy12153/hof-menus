@@ -60,19 +60,13 @@ body{background:radial-gradient(ellipse at 15% 90%,rgba(255,90,61,.1) 0%,transpa
 
 /* VAPES */
 .vape-area{flex:1;min-height:0;display:flex;flex-direction:column}
-.vg{display:grid;grid-template-columns:repeat(5,1fr);gap:.4vw;margin-top:.15vh;flex:1;min-height:0}
-.vc{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:4px;padding:.2vh .35vw;display:flex;flex-direction:column;overflow:hidden;min-height:0}
-/* Compact header: brand+price on one line, size+deal below */
-.vh{display:flex;justify-content:space-between;align-items:center;flex-shrink:0;line-height:1.1}
-.vb{font-family:'Oswald';font-weight:700;font-size:1.2vw;color:var(--fire-orange);text-transform:uppercase;text-shadow:0 0 12px rgba(255,140,66,.25)}
-.vp{font-family:'Oswald';font-weight:700;font-size:1.35vw;color:var(--white)}
-.v-sub{display:flex;align-items:center;gap:.3vw;flex-shrink:0;line-height:1}
-.vs{font-family:'Barlow Condensed';font-weight:600;font-size:.8vw;color:var(--light-smoke)}
-.vd{font-family:'Oswald';font-weight:700;font-size:1.1vw;color:var(--deep-black);background:var(--gold);padding:.05vh .3vw;border-radius:2px;text-transform:uppercase;box-shadow:0 0 8px rgba(255,208,96,.5);animation:deal-pulse 2s ease-in-out infinite}
+.vg{display:grid;grid-template-columns:repeat(5,1fr);gap:.5vw;margin-top:.15vh;flex:1;min-height:0}
+.vc{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:4px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;min-height:0}
+.vb{font-family:'Oswald';font-weight:700;font-size:2.2vw;color:var(--fire-orange);text-transform:uppercase;text-shadow:0 0 15px rgba(255,140,66,.3);line-height:1.1}
+.vs{font-family:'Barlow Condensed';font-weight:600;font-size:1.3vw;color:var(--light-smoke);margin-top:.15vh}
+.vp{font-family:'Oswald';font-weight:700;font-size:2.8vw;color:var(--white);margin-top:.2vh}
+.vd{font-family:'Oswald';font-weight:700;font-size:1.6vw;color:var(--deep-black);background:var(--gold);padding:.15vh .5vw;border-radius:3px;text-transform:uppercase;box-shadow:0 0 10px rgba(255,208,96,.5);animation:deal-pulse 2s ease-in-out infinite;margin-top:.3vh}
 @keyframes deal-pulse{0%{box-shadow:0 0 6px rgba(255,208,96,.4);transform:scale(1)}50%{box-shadow:0 0 18px rgba(255,208,96,.8),0 0 35px rgba(255,140,66,.3);transform:scale(1.05)}100%{box-shadow:0 0 6px rgba(255,208,96,.4);transform:scale(1)}}
-.vfl{flex:1;display:flex;flex-direction:column;justify-content:space-evenly;min-height:0;overflow:hidden}
-.vf{font-family:'Barlow Condensed';font-weight:600;font-size:1.2vw;color:var(--light-smoke);border-bottom:1px solid rgba(255,255,255,.04);line-height:1.05;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
-.vf:last-child{border-bottom:none}
 
 /* ACCESSORIES */
 .acc{flex-shrink:0;display:flex;align-items:center;gap:1.5vw;margin-top:.4vh;padding-top:.3vh;border-top:1px solid rgba(255,255,255,.06)}
@@ -171,29 +165,34 @@ body{background:radial-gradient(ellipse at 15% 90%,rgba(255,90,61,.1) 0%,transpa
       <div class="sec">Vapes</div>
       <div class="vg">
         <div class="vc">
-          <div class="vh"><div class="vb">Muha Meds</div><div class="vp">$39.99</div></div>
-          <div class="v-sub"><span class="vs">2g Disposable</span><span class="vd">2 for $65</span></div>
-          <div class="vfl"><div class="vf">Pineapple Paradise</div><div class="vf">Blue Slushie</div><div class="vf">Bubblegum Burst</div><div class="vf">Dragonberry Runtz</div><div class="vf">Horchata</div><div class="vf">Galactic Diesel</div><div class="vf">Sweet Dreams OG</div><div class="vf">Frozen Pomegranate</div><div class="vf">Watermelon Moonshine</div><div class="vf">Habibi</div></div>
+          <div class="vb">Muha Meds</div>
+          <div class="vs">2g Disposable</div>
+          <div class="vp">$39.99</div>
+          <div class="vd">2 for $65</div>
         </div>
         <div class="vc">
-          <div class="vh"><div class="vb">MadLabs</div><div class="vp">$34.99</div></div>
-          <div class="v-sub"><span class="vs">2g Disposable</span><span class="vd">2 for $55</span></div>
-          <div class="vfl"><div class="vf">Sherbacio</div><div class="vf">Jet Fuel</div><div class="vf">Watermelon Z</div><div class="vf">Horchata</div><div class="vf">Peach Rings</div><div class="vf">Pixie Dust</div><div class="vf">Blue Razz</div><div class="vf">Lemon Cherry G</div><div class="vf">Guava Kush</div><div class="vf">Blue Dream</div></div>
+          <div class="vb">MadLabs</div>
+          <div class="vs">2g Disposable</div>
+          <div class="vp">$34.99</div>
+          <div class="vd">2 for $55</div>
         </div>
         <div class="vc">
-          <div class="vh"><div class="vb">Choices</div><div class="vp">$29.99</div></div>
-          <div class="v-sub"><span class="vs">2g Switch</span><span class="vd">2/$50 w/ Ghost</span></div>
-          <div class="vfl"><div class="vf">Honey Cream</div><div class="vf">White Peach</div><div class="vf">Watermelon Tart</div><div class="vf">Tres Leches</div><div class="vf">Sweet Citrus</div><div class="vf">Sour Push Pop</div><div class="vf">Red Starburst</div><div class="vf">Red Blow Pop</div><div class="vf">Honey Comb</div><div class="vf">Raspberry Kush</div></div>
+          <div class="vb">Choices</div>
+          <div class="vs">2g Switch</div>
+          <div class="vp">$29.99</div>
+          <div class="vd">2/$50 w/ Ghost</div>
         </div>
         <div class="vc">
-          <div class="vh"><div class="vb">Ghost</div><div class="vp">$29.99</div></div>
-          <div class="v-sub"><span class="vs">2g Disposable</span><span class="vd">2/$50 w/ Choices</span></div>
-          <div class="vfl"><div class="vf">Concrete Haze</div><div class="vf">Bubba Drift</div><div class="vf">Blueberry Blitz</div><div class="vf">Black Cherry</div><div class="vf">Golden Z</div><div class="vf">Midnight Mirage</div><div class="vf">Tropic Burst</div><div class="vf">Jungle Vice</div><div class="vf">Peach Paradise</div><div class="vf">Grape Bliss</div></div>
+          <div class="vb">Ghost</div>
+          <div class="vs">2g Disposable</div>
+          <div class="vp">$29.99</div>
+          <div class="vd">2/$50 w/ Choices</div>
         </div>
         <div class="vc">
-          <div class="vh"><div class="vb">Stiizy Pod</div><div class="vp">$29.99</div></div>
-          <div class="v-sub"><span class="vs">1g Pod</span><span class="vd">2 for $40</span></div>
-          <div class="vfl"><div class="vf">Blue Burst</div><div class="vf">Birthday Cake</div><div class="vf">Blue Dream</div><div class="vf">SFV OG</div><div class="vf">Granddaddy Purp</div><div class="vf">Gelato</div><div class="vf">Apple Fritter</div><div class="vf">King Louis XIII</div><div class="vf">Pineapple Express</div><div class="vf">OG Kush</div></div>
+          <div class="vb">Stiizy Pod</div>
+          <div class="vs">1g Pod</div>
+          <div class="vp">$29.99</div>
+          <div class="vd">2 for $40</div>
         </div>
       </div>
       <div class="acc">
