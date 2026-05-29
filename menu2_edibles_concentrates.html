@@ -55,6 +55,12 @@ body{background:radial-gradient(ellipse at 15% 90%,rgba(255,90,61,.1) 0%,transpa
 .cpb .v{font-family:'Oswald';font-weight:700;font-size:2.2vw;color:var(--white)}
 
 /* BOTTOM — pre-rolls */
+.drinks-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:.5vw}
+.drink-card{background:rgba(255,255,255,.035);border:1px solid rgba(255,255,255,.1);border-radius:4px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;padding:.5vh .3vw;position:relative;overflow:hidden}
+.drink-card>*{position:relative;z-index:1}
+.dn{font-family:'Oswald';font-weight:700;font-size:1.4vw;color:var(--fire-red);text-transform:uppercase;text-shadow:0 0 18px rgba(255,90,61,.3);line-height:1.1}
+.dd{font-family:'Barlow Condensed';font-weight:600;font-size:1vw;color:var(--white);margin-top:.1vh}
+.dp{font-family:'Oswald';font-weight:700;font-size:1.8vw;color:var(--white);margin-top:.1vh}
 .bot{display:flex;flex-direction:column;gap:.2vh;flex:1;min-height:0}
 .bot-top{display:grid;grid-template-columns:1fr;gap:.4vw}
 .bot-row-5{display:grid;grid-template-columns:repeat(5,1fr);gap:.4vw;flex:1}
@@ -138,6 +144,29 @@ body{background:radial-gradient(ellipse at 15% 90%,rgba(255,90,61,.1) 0%,transpa
           <div class="cc-name">White Truffle Badder</div>
           <div class="cc-meta"><span class="tb i">IND</span><span class="cc-thc">68.69%</span></div>
           <div class="cc-prices"><div class="cpb"><div class="w">1g</div><div class="v">$10</div></div><div class="cpb"><div class="w">Oz</div><div class="v">$105</div></div></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DRINKS -->
+    <div style="flex-shrink:0">
+      <div class="sec">Drinks</div>
+      <div class="drinks-grid">
+        <div class="drink-card">
+          <div class="dn">Looper</div>
+          <div class="dd">Cola • Diet Cola • Orange • Grape • Pineapple</div>
+          <div class="dd">50mg each</div>
+          <div class="dp">$10</div>
+        </div>
+        <div class="drink-card">
+          <div class="dn">Oracle</div>
+          <div class="dd">Raspberry Spritz • 50mg</div>
+          <div class="dp">$10</div>
+        </div>
+        <div class="drink-card">
+          <div class="dn">Chronic Harvest</div>
+          <div class="dd">Tea / Lemonade • 150mg</div>
+          <div class="dp">$20</div>
         </div>
       </div>
     </div>
